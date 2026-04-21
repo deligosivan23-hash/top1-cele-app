@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Settings, Play, ChevronRight, Flame, Clock, CheckCircle, X, AlertTriangle } from 'lucide-react';
 import { useStore } from '../store/useStore';
@@ -235,7 +235,16 @@ function ProgressTodayCard({ attempts }) {
 export default function HomeScreen() {
   const navigate = useNavigate();
   const { attempts, topicStats, studyTasks, resetAll } = useStore();
+  const lastPlanDate      = useStore((s) => s.lastPlanDate);
+  const generateDailyPlan = useStore((s) => s.generateDailyPlan);
   const [showReset, setShowReset] = useState(false);
+
+  useEffect(() => {
+    const today = new Date().toDateString();
+    if (lastPlanDate !== today) {
+      generateDailyPlan();
+    }
+  }, []); // run once on mount
 
   const hasData = attempts.length > 0;
 
