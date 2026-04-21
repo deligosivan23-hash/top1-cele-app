@@ -115,3 +115,33 @@ export function getDailyAccuracy(attempts, days = 14) {
   }
   return result;
 }
+
+// ─── Compute per-day average solve time for last N days (for charts) ────────
+export function getDailyAvgTime(attempts, days = 14) {
+  const result = [];
+  for (let i = days - 1; i >= 0; i--) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    date.setHours(0, 0, 0, 0);
+    const next = new Date(date);
+    next.setDate(next.getDate() + 1);
+
+    const dayAttempts = attempts.filter((a) => {
+      const t = new Date(a.timestamp);
+      return t >= date && t < next;
+    });
+
+    const label = date.toLocaleDateString('en-PH', { month: 'short', day: 'numeric' });
+    if (dayAttempts.length === 0) {
+      result.push({ date: label, avgTime: null, count: 0 });
+    } else {
+      const totalSeconds = dayAttempts.reduce((sum, a) => sum + (a.timeSeconds || 0), 0);
+      result.push({
+        date: label,
+        avgTime: Math.round(totalSeconds / dayAttempts.length),
+        count: dayAttempts.length,
+      });
+    }
+  }
+  return result;
+}
