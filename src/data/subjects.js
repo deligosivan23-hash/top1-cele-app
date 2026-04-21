@@ -1,0 +1,55 @@
+export const universitySubjects = [
+  // YEAR 1, SEM 1
+  { id: "univ-math1", name: "Algebra & Trigonometry", yearLevel: 1, semester: 1, isMinor: false,
+    coveredTopicIds: ["math-alg","math-trig","alg-linear","alg-quadratic","alg-simultaneous","alg-polynomials","alg-exponents","trig-identities","trig-sines","trig-cosines","trig-circle"] },
+  { id: "univ-ge1", name: "Understanding the Self", yearLevel: 1, semester: 1, isMinor: true, coveredTopicIds: [] },
+  { id: "univ-ge2", name: "Purposive Communication", yearLevel: 1, semester: 1, isMinor: true, coveredTopicIds: [] },
+  { id: "univ-drawing", name: "Engineering Drawing", yearLevel: 1, semester: 1, isMinor: false, coveredTopicIds: ["engsurvey-layout"] },
+  // YEAR 1, SEM 2
+  { id: "univ-math2", name: "Analytic Geometry", yearLevel: 1, semester: 2, isMinor: false,
+    coveredTopicIds: ["math-ageo","ageo-distance","ageo-midpoint","ageo-slope","ageo-conics"] },
+  { id: "univ-diffcalc", name: "Differential Calculus", yearLevel: 1, semester: 2, isMinor: false,
+    coveredTopicIds: ["math-diff","diff-limits","diff-derivatives","diff-rules","diff-maxmin","diff-maxmin-optim"] },
+  { id: "univ-ge3", name: "The Contemporary World", yearLevel: 1, semester: 2, isMinor: true, coveredTopicIds: [] },
+  // YEAR 2, SEM 1
+  { id: "univ-intcalc", name: "Integral Calculus", yearLevel: 2, semester: 1, isMinor: false,
+    coveredTopicIds: ["math-int","int-indefinite","int-definite","int-area","int-volume","int-area-between","int-vol-revolution"] },
+  { id: "univ-de", name: "Differential Equations", yearLevel: 2, semester: 1, isMinor: false,
+    coveredTopicIds: ["math-de","de-firstorder","de-separable","de-linear"] },
+  { id: "univ-stat", name: "Engineering Statistics", yearLevel: 2, semester: 1, isMinor: false,
+    coveredTopicIds: ["math-stat","stat-prob","stat-conditional","stat-central","stat-deviation"] },
+  { id: "univ-ge4", name: "Science, Technology & Society", yearLevel: 2, semester: 1, isMinor: true, coveredTopicIds: [] },
+  // YEAR 2, SEM 2
+  { id: "univ-engmech", name: "Engineering Mechanics (Statics)", yearLevel: 2, semester: 2, isMinor: false,
+    coveredTopicIds: ["str-anal","anal-statics","anal-trusses"] },
+  { id: "univ-surveying", name: "Plane and Geodetic Surveying", yearLevel: 2, semester: 2, isMinor: false,
+    coveredTopicIds: ["mste-surv","surv-plane","surv-geo","plane-distance","plane-angle","plane-traverse","plane-leveling","comp-bearing","comp-error","plane-trav-bowditch","plane-trav-closure"] },
+  // YEAR 3, SEM 1
+  { id: "univ-fluid", name: "Fluid Mechanics", yearLevel: 3, semester: 1, isMinor: false,
+    coveredTopicIds: ["hge-hyd","hyd-prop","hyd-stat","hyd-dyn","prop-density","fstat-pressure","fstat-buoyancy","dyn-bernoulli","dyn-continuity","dyn-energy","dyn-bern-pv","fstat-pres-hydro"] },
+  { id: "univ-som", name: "Strength of Materials", yearLevel: 3, semester: 1, isMinor: false,
+    coveredTopicIds: ["anal-beams","anal-smd","anal-frames","anal-smd-basic"] },
+  { id: "univ-soil", name: "Soil Mechanics", yearLevel: 3, semester: 1, isMinor: false,
+    coveredTopicIds: ["hge-geo","geo-basic","geo-class","geo-comp","geo-perm","soil-index","soil-weight","soil-atterberg","comp-proctor","perm-darcy","soil-index-wvr"] },
+  // YEAR 3, SEM 2
+  { id: "univ-hydraulics", name: "Hydraulics", yearLevel: 3, semester: 2, isMinor: false,
+    coveredTopicIds: ["hyd-pipe","hyd-open","hyd-hydro","pipe-darcyw","pipe-minor","open-manning","open-critical","pipe-dw-headloss","pipe-dw-series","open-mann-app","open-mann-normal"] },
+  { id: "univ-structural", name: "Structural Analysis", yearLevel: 3, semester: 2, isMinor: false,
+    coveredTopicIds: ["str-anal","anal-frames","anal-beams","anal-smd","anal-smd-fixed","anal-smd-continuous"] },
+  { id: "univ-trans", name: "Transportation Engineering", yearLevel: 3, semester: 2, isMinor: false,
+    coveredTopicIds: ["mste-trans","trans-hwy","trans-traf","hwy-design","hwy-super","traf-flow","traf-los","traf-los-calc"] },
+  // YEAR 4, SEM 1
+  { id: "univ-rc", name: "Reinforced Concrete Design", yearLevel: 4, semester: 1, isMinor: false,
+    coveredTopicIds: ["str-rc","rc-beams","rc-columns","rc-slabs","rc-footings","rc-beam-singly","rc-beam-doubly","rc-beam-tbeam","rc-col-short","rc-col-long"] },
+  { id: "univ-found", name: "Foundation Engineering", yearLevel: 4, semester: 1, isMinor: false,
+    coveredTopicIds: ["geo-found","geo-shear","geo-cons","found-bearing","found-piles","cons-settlement","shear-mohr","found-bc-terzaghi","found-bc-fs","shear-mohr-circle"] },
+  { id: "univ-steel", name: "Steel Design", yearLevel: 4, semester: 1, isMinor: false,
+    coveredTopicIds: ["str-steel","steel-tension","steel-compression","steel-beams","steel-connections","steel-bolt-design","steel-weld-design"] },
+  // YEAR 4, SEM 2
+  { id: "univ-pm", name: "Engineering Management", yearLevel: 4, semester: 2, isMinor: false,
+    coveredTopicIds: ["con-pm","con-est","pm-cpm","pm-pert","est-quantity","est-bidding","pm-cpm-float"] },
+  { id: "univ-timber", name: "Timber Design", yearLevel: 4, semester: 2, isMinor: false,
+    coveredTopicIds: ["str-timber","timber-beams","timber-columns"] },
+  { id: "univ-mat", name: "Construction Materials & Testing", yearLevel: 4, semester: 2, isMinor: false,
+    coveredTopicIds: ["con-mat","mat-concrete","mat-steel","mat-asphalt"] },
+];
